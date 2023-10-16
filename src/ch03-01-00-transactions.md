@@ -20,7 +20,7 @@ It is worth mentioning that before broadcasting the transaction to the Sequencer
 
 ## Reception and Processing: The Sequencer's Role
 
-On receiving the transaction, the Sequencer acknowledges its receipt but hasn't processed it yet—similar to Ethereum's mempool state. 
+On receiving the transaction, the Sequencer acknowledges its receipt but hasn't processed it yet—similar to Ethereum's mempool state.
 
 ```
 Sequencer's Process
@@ -30,7 +30,6 @@ Validate the transaction
 Execute the transaction
 Update the state
 ```
-
 
 It's crucial to remember the sequentiality of transaction processing in Starknet: the nonce won't update until the Sequencer processes your transaction. This aspect could become a hurdle when building backend applications, as sending multiple transactions consecutively may result in confusion or errors.
 
@@ -45,7 +44,6 @@ Transaction Status Transition
 
 1. Received -> Accepted on L2
 ```
-
 
 If a transaction fails during execution, it will be included in the block with the status 'reverted'.
 
@@ -78,7 +76,7 @@ It is considered to be an average of 6 blocks to reach the finality status; give
 Starknet, a Layer-2 (L2) solution on Ethereum, has a two-step transaction finality process. The first step is when the transaction gets accepted on Layer-2 (Starknet), and the second step is when the transaction gets accepted on Layer-1 (Ethereum).
 
 - Accepted on L2: When a transaction is processed by the Sequencer and included in a block on Starknet, it reaches L2 finality. However, this finality relies on the L2 consensus and comes with a slight risk of collusion among Sequencers leading to transaction reversal.
-- Accepted on L1: The absolute finality comes when the block containing the transaction gets a proof generated, the proof is validated by the Verifier contract on Ethereum, and the state is updated on Ethereum. At this point, the transaction is as secure as the Ethereum's PoW consensus can provide, meaning it becomes computationally infeasible to alter or reverse.
+- Accepted on L1: The absolute finality comes when the block containing the transaction gets a proof generated, the proof is validated by the Verifier contract on Ethereum, and the state is updated on Ethereum. At this point, the transaction is as secure as the Ethereum's PoS consensus can provide, meaning it becomes computationally infeasible to alter or reverse.
 
 ### Comparison
 
@@ -86,4 +84,3 @@ The main difference between Ethereum and Starknet's transaction finality lies in
 
 - Ethereum's transaction finality becomes increasingly unlikely to be reversed as more blocks are added.
 - Starknet's finality process is two-fold. The initial finality (L2) is quicker but relies on L2 consensus
-
