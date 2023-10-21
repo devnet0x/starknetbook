@@ -21,7 +21,7 @@
       - [Beginner - Counter UI](ch02-07-01-00-counter-ui.md)
       - [Beginner - ERC-20 UI](ch02-07-01-01-erc20-ui.md)
   - [Starknet-React: React Integration](ch02-08-starknet-react.md)
-      - [Examples](ch02-08-01-examples.md)
+    - [Examples](ch02-08-01-examples.md)
       - [Beginner - ERC-20 UI](ch02-08-01-01-erc20-ui.md)
       - [Intermediate - Million Dollar Homepage](ch02-07-01-02-million-dollar-homepage.md)
   - [Starknet-py: Python SDK 🚧](ch02-09-starknet-py.md)
